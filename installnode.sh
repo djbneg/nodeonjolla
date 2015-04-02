@@ -28,8 +28,8 @@ fi
 
 # setting up the folders and the the symbolic links
 printf $URL"\n"
-ME=$(whoami) ; sudo chown -R $ME /usr/local && cd /usr/local/bin #adding yourself to the group to access /usr/local/bin
-mkdir _node && cd $_ && wget $URL -O - | tar zxf - --strip-components=1 # downloads and unzips the content to _node
+ME=$(whoami) ; chown -R $ME /usr/local && cd /usr/local/bin #adding yourself to the group to access /usr/local/bin
+mkdir _node && cd $_ && curl $URL | tar zxf - --strip-components=1 # downloads and unzips the content to _node
 cp -r ./lib/node_modules/ /usr/local/lib/ # copy the node modules folder to the /lib/ folder
 cp -r ./include/node /usr/local/include/ # copy the /include/node folder to /usr/local/include folder
 mkdir /usr/local/man/man1 # create the man folder
