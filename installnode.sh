@@ -1,7 +1,7 @@
 #! /bin/bash
 # run it by: bash install-node.sh
 read -p " which version of Node do you need to install: enter 0.10.24 or 0.10.28: " VERSIONNAME
-read -p " Are you using a 32-bit or 64-bit operating system ? Enter 64 or 32: " ARCHVALUE
+read -p " Are you using a 32-bit, 64-bit or ARM operating system ? Enter 64, 32 or ARM: " ARCHVALUE
 if [[ $ARCHVALUE = 32 ]]
     then
     printf "user put in 32 \n"
